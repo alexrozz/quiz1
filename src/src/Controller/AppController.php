@@ -28,17 +28,15 @@ class AppController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $quiz->setCompletedAt(new \DateTimeImmutable());
             $entityManager->flush();
-            $submitted = true;
-        }
 
-        $correctQuestions = $quizService->getCorrectQuestions($quiz);
-        $incorrectQuestions = $quizService->getIncorrectQuestions($quiz);
+            $correctQuestions = $quizService->getCorrectQuestions($quiz);
+            $incorrectQuestions = $quizService->getIncorrectQuestions($quiz);
+        }
 
         return $this->render('app/index.html.twig', [
             'form' => $form->createView(),
-            'correctQuestions' => $correctQuestions,
-            'incorrectQuestions' => $incorrectQuestions,
-            'submitted' => $submitted ?? false,
+            'correctQuestions' => $correctQuestions ?? null,
+            'incorrectQuestions' => $incorrectQuestions ?? null,
         ]);
     }
 }

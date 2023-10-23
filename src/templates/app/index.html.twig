@@ -16,7 +16,7 @@
 
         <br>
 
-        {% if submitted %}
+        {% if correctQuestions or incorrectQuestions %}
             Correct questions:
             {% for quizQuestion in correctQuestions %}
                 <br>{{ quizQuestion.question.text }}
