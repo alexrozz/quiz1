@@ -23,5 +23,5 @@ To load fixtures data, run:
 php bin/console doctrine:fi:lo
 ```
 
-Now, at http://localhost:80/takequiz you can take the quiz and check results
+Now, at http://localhost/app/quiz you can take the quiz and check results
  
