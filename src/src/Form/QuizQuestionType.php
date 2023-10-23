@@ -26,10 +26,9 @@ class QuizQuestionType extends AbstractType
 
             $form
                 ->add('question', TextType::class, [
-                    'label' => false, // Устанавливаем метку на false
-                    'data' => $quizQuestion->getQuestion(), // Устанавливаем текст вопроса
-                    'disabled' => true, // Блокируем редактирование
-                    // Другие опции, если необходимо
+                    'label' => false,
+                    'data' => $quizQuestion->getQuestion(),
+                    'disabled' => true,
                 ])
                 ->add('answers', EntityType::class, [
                     'class' => Answer::class,
