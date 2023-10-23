@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello QuizController!{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit">Complete quiz</button>
+        {{ form_end(form) }}
+
+        <br>
+
+        {% if submitted %}
+            Correct questions:
+            {% for quizQuestion in correctQuestions %}
+                <br>{{ quizQuestion.question.text }}
+            {% endfor %}
+            <hr>
+            Incorrect questions:
+            {% for quizQuestion in incorrectQuestions %}
+                <br>{{ quizQuestion.question.text }}
+            {% endfor %}
+        {% endif %}
+
+    </div>
+{% endblock %}

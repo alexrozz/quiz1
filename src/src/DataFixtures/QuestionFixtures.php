@@ -86,6 +86,111 @@ class QuestionFixtures extends Fixture
                 ],
             ],
         ],
+        [
+            'text' => '5 + 5 = ',
+            'answers' => [
+                [
+                    'value' => '6',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '18',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '10',
+                    'is_correct' => true,
+                ],
+                [
+                    'value' => '9',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '0',
+                    'is_correct' => false,
+                ],
+            ],
+        ],
+        [
+            'text' => '6 + 6 = ',
+            'answers' => [
+                [
+                    'value' => '3',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '9',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '0',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '12',
+                    'is_correct' => true,
+                ],
+                [
+                    'value' => '5 + 7',
+                    'is_correct' => true,
+                ],
+            ],
+        ],
+        [
+            'text' => '7 + 7 = ',
+            'answers' => [
+                [
+                    'value' => '5',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '14',
+                    'is_correct' => true,
+                ],
+            ],
+        ],
+        [
+            'text' => '9 + 9 = ',
+            'answers' => [
+                [
+                    'value' => '18',
+                    'is_correct' => true,
+                ],
+                [
+                    'value' => '9',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '17 + 1',
+                    'is_correct' => true,
+                ],
+                [
+                    'value' => '2 + 16',
+                    'is_correct' => true,
+                ],
+            ],
+        ],
+        [
+            'text' => '10 + 10 = ',
+            'answers' => [
+                [
+                    'value' => '0',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '2',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '8',
+                    'is_correct' => false,
+                ],
+                [
+                    'value' => '20',
+                    'is_correct' => true,
+                ],
+            ],
+        ],
     ];
 
 

@@ -85,4 +85,21 @@ class Question
     {
         return $this->getText();
     }
+
+    public function getCorrectAnswers()
+    {
+        return $this->getAnswers()
+            ->filter(function (Answer $answer) {
+                return $answer->getIsCorrect();
+            });
+    }
+
+    public function getIncorrectAnswers()
+    {
+        return $this->getAnswers()
+            ->filter(function (Answer $answer) {
+                return !$answer->getIsCorrect();
+            });
+    }
+
 }
